@@ -1,284 +1,442 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Playbook: Sesión 3 - 3ro Preparatoria</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-S3-TM3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 3 - 3ro Preparatoria</strong></h1>
-    <div class="header-widgets">
-      <div class="timer-container">
-        <span id="timer">⏱️ 00:00</span>
-        <button id="startStop">Start</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div class="theme-toggle">
-        <i class="fas fa-sun"></i>
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle-input">
-          <span class="slider round"></span>
-        </label>
-        <i class="fas fa-moon"></i>
-      </div>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 3 - 3o de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar WebWave, JDoodle, GitHub y herramientas de IA para redactar user stories y generar user flows (texto + Mermaid) para diseñar experiencias digitales y comprender el UX centrado en el usuario y la accesibilidad.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Para mi proyecto [describe brevemente la idea y quién es el usuario], ayúdame a redactar user stories claras. Con base en esas historias, genera el user flow del proceso principal en texto y también en un diagrama Mermaid con decisiones y estados finales. Revisa la consistencia del flujo y sugiere mejoras si detectas ambigüedades.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>UX centrado en el usuario: Es diseñar pensando siempre en que la persona que use tu app no se confunda y encuentre lo que busca fácilmente, como un mapa bien señalizado.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar diagramas de flujo para mapear el camino que sigue una persona dentro de una aplicación.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes caminos o decisiones del usuario para entender limitaciones en el flujo.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Acceso a WebWave, JDoodle, GitHub y plataformas de IA (ChatGPT/Gemini/Claude)</label>
+                        <label><input type="checkbox"> Cuaderno de notas para bocetos de flujos</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa lógica de flujos y diagramas Mermaid</label>
+                        <label><input type="checkbox"> 📋 Para visualizar diagramas: Copiar el código Mermaid generado por XOLO y pegarlo en un visualizador o JDoodle.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener tus cuentas seguras, cerrar sesión en computadoras públicas y organizar tus archivos digitales con orden.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre UX centrado en el usuario y user flows (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el diagrama Mermaid no se visualiza:</strong> Pegar el código en un editor como Mermaid Live Editor para verificar errores de sintaxis.</li>
+<li><strong>Si hay problemas con GitHub:</strong> Asegurarse de haber confirmado el correo electrónico de la cuenta y estar en el repositorio correcto.</li>
+<li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos estructura y claridad a sus ideas digitales.".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre UX centrado en el usuario y User Flows.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A diseñar flujos lógicos para que los usuarios no se pierdan en sus apps.</p>
+                        <p><strong>Aplicación real:</strong> Los diseñadores de apps en empresas como Google o Spotify usan esta tecnología para asegurar que sus productos sean fáciles de usar.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo transformar una idea en una serie de pasos lógicos llamados user flows.</li>
+                            <li>Introduce el concepto de UX centrado en el usuario y por qué es vital para el éxito de un proyecto.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar herramientas de IA para redactar historias de usuario.</li>
+                            <li>Aprender sobre consistencia lógica y accesibilidad en el diseño.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar IA para crear user flows y entender el UX centrado en el usuario.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a dar un paso fundamental en el desarrollo de cualquier producto digital: el diseño de la experiencia del usuario. Por favor, abran el chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Hoy aprenderán sobre User Stories y cómo crear User Flows consistentes. Recuerden que XOLO es su mentor experto, así que no duden en preguntarle cualquier cosa si algo no queda claro. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los herramientas digitales conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique flujos de usuario eficientes.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar diagramas Mermaid.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Verificar la accesibilidad de su flujo y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a crear mi user flow como si fuera el guion de una demo: define el “camino principal” y 2 decisiones críticas. Con Vibe Coding, haz que el flujo sea claro, sin pasos redundantes. Ejecuta: entrega el Mermaid final + una lista de mejoras UX (fricción, claridad, accesibilidad básica) que debo aplicar antes de diseñar pantallas."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El flujo llega a un final lógico?</li>
+                            <li>¿Qué pasa si el usuario toma una decisión inesperada en el diagrama?</li>
+                            <li>¿Funciona igual el flujo en una versión móvil vs una versión de escritorio?</li>
+                            <li>¿Cómo asegura tu user flow que la aplicación sea realmente centrada en el usuario?</li>
+                            <li>¿De qué manera la accesibilidad influye en los pasos que definiste en tu diagrama Mermaid?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a pasar de la teoría a la acción. El flujo de hoy es: idear su proyecto, definir el VIBE de la experiencia, generar su código GCS (en este caso, su diagrama Mermaid) y luego experimentar. Por ejemplo, podrían diseñar el flujo de una app para adoptar mascotas o un sistema de gestión de tareas escolares. Una vez que XOLO les dé su diagrama, analicen las preguntas de experimentación para ver si su diseño es realmente sólido. No olviden verificar la accesibilidad básica. Si tienen errores o dudas con el código Mermaid o la lógica, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con mi user flow básico. ¿Puedes enseñarme cómo hacer que mi diagrama Mermaid incluya estados de error y una ruta de recuperación para el usuario?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué pasos del flujo funcionan bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué partes del flujo funcionan mejor en tu diseño? ¿Qué te sorprendió sobre la lógica del usuario?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi diseño guía al usuario a través de pasos claros. Me sorprendió que definir las decisiones críticas ayuda a evitar errores."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  </header>
-  <div class="main-container">
-    <aside class="activity-list">
-      <h2>Actividades</h2>
-      <ul>
-        <li><a href="#activity-0">📝</a></li>
-        <li><a href="#activity-1">1</a></li>
-        <li><a href="#activity-2">2</a></li>
-        <li><a href="#activity-3">3</a></li>
-        <li><a href="#activity-4">4</a></li>
-        <li><a href="#activity-5">5</a></li>
-      </ul>
-      <div class="sidebar-info">
-        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-      </div>
-    </aside>
-    <main class="content">
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-      <section class="activity-card" id="activity-0">
-        <h2 class="activity-title">📝 De un Vistazo: Misión M03: Diseñando el Flujo de la Experiencia</h2>
-        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables.</p>
-        <div class="overview-table-container">
-          <table>
-            <thead>
-              <tr>
-                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <strong>Objetivos de Aprendizaje:</strong>
-                  <ul>
-                    <li>Puedo explicar el concepto de 'user stories' y 'user flows' en el diseño de experiencia de usuario.</li>
-                    <li>Puedo utilizar una IA para generar 'user stories' y 'user flows' (textual o diagrama) para un proyecto digital.</li>
-                    <li>Objetivo general de la sesión: Utilizar IA para generar y visualizar 'user stories' y 'user flows' como herramientas fundamentales en el diseño de la experiencia de usuario de un proyecto digital.</li>
-                  </ul>
-                  <strong>Secuencia Didáctica:</strong>
-                  <ul>
-                    <li><strong>Actividad 1:</strong> Saludo Interactivo con IA (3 min)</li>
-                    <li><strong>Actividad 2:</strong> “I Can” + Desafío (5–7 min)</li>
-                    <li><strong>Actividad 3:</strong> AI GYM (10–12 min)</li>
-                    <li><strong>Actividad 4:</strong> Brain Spark (17–20 min)</li>
-                    <li><strong>Actividad 5:</strong> GNIUS STORM (5 min)</li>
-                  </ul>
-                  <strong>Entregable Clave:</strong>
-                  <ul>
-                    <li>Un diagrama de flujo de usuario (user flow) generado por IA (textual o Mermaid) que visualice el camino principal de un usuario en una aplicación digital.</li>
-                  </ul>
-                </td>
-                <td>
-                  <strong>Materiales Específicos:</strong>
-                  <ul>
-                    <li>Proyector e internet</li>
-                    <li>Chatbot (Xolo)</li>
-                    <li>Herramienta para diagramas Mermaid.js (ej. Mermaid Live Editor, VS Code con extensión)</li>
-                    <li>Ejemplo mínimo listo (user stories y user flow de ejemplo)</li>
-                    <li>Presentación (11 diapositivas).</li>
-                  </ul>
-                  <strong>Criterios de calidad:</strong>
-                  <ul>
-                    <li>Claridad y coherencia del user flow.</li>
-                    <li>Trazabilidad entre las user stories y el user flow generado.</li>
-                    <li>Justificación de las decisiones de UX reflejadas en el flujo.</li>
-                    <li>Uso efectivo y estratégico de la IA para la conceptualización y generación del flujo.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-1">
-        <h2 class="activity-title">⚡ Actividad 1: Saludo Interactivo con IA ⏰ 3 minutos</h2>
-        <p class="activity-purpose">Enmarcar foco y activar a Xolo con perfil/intereses.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Bienvenida y foco ⏰ 1 minuto</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 2) Presenta el tema y su valor profesional.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Equipo: hoy nos centraremos en la <strong>dirección de proyectos</strong> desde la <strong>perspectiva del usuario</strong>. Antes de escribir una línea de código, un buen director de proyecto de IA entiende el <strong>"viaje del usuario"</strong>. Nuestra misión es diseñar ese <strong>flujo de experiencia</strong> de manera estratégica, asistidos por IA.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Activación con Xolo ⏰ 2 minutos</h3>
-              <p class="step-instructions">Cada estudiante envía a Xolo: <strong>“Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Estoy en la sesión sobre Diseño del Flujo de la Experiencia. Necesito foco en user stories y user flows con IA.”</strong></p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Activen a <strong>Xolo</strong> con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas para el <strong>diseño de experiencia de usuario</strong>.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-2">
-        <h2 class="activity-title">⚡ Actividad 2: “I Can Statement” + Desafío ⏰ 5-7 minutos</h2>
-        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Presenta el reto ⏰ 3 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 3) Describe el reto: diseñar un user flow completo para una funcionalidad de una app, utilizando IA.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">El reto es convertir una idea de funcionalidad en un <strong>user flow</strong> claro y trazable, que sirva de guía para el desarrollo. Evaluaremos la <strong>claridad del flujo</strong> y cómo la IA les ayudó a estructurarlo.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Escribe tu “I Can” ⏰ 3 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 4) Cada estudiante redacta 1 “I Can” alineado al entregable.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo generar un <strong>user flow</strong> claro usando IA para definir la <strong>experiencia de usuario</strong> de mi app.”</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-3">
-        <h2 class="activity-title">⚡ Actividad 3: AI GYM ⏰ 10-12 minutos</h2>
-        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Marco del día: User Stories y User Flows con IA ⏰ 4 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 5) Introduce el concepto de "user stories" y "user flows" como herramientas clave en el diseño UX, y cómo la IA puede asistirlos en su generación.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">El <strong>diseño de UX</strong> es fundamental porque define cómo el usuario interactúa con nuestro producto. Las <strong>'user stories'</strong> nos ayudan a entender las necesidades desde la <strong>perspectiva del usuario</strong>, y los <strong>'user flows'</strong> mapean su recorrido. Un error común es saltar a la interfaz sin entender el viaje. La IA nos permite prototipar estos <strong>flujos</strong> de manera ágil.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Mini-demostración: Generación de User Stories y User Flow ⏰ 5 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 6) Modela en vivo cómo pedirle a Xolo una guía completa para diseñar un flujo de usuario desde cero.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Observen cómo podemos pedir a <strong>Xolo</strong> que sea nuestro director de proyecto. Usaré este prompt que ustedes pueden adaptar: <strong>“Xolo, para mi proyecto [describe brevemente la idea y quién es el usuario], ayúdame a redactar user stories claras Con base en esas historias, genera el user flow del proceso principal en texto y también en un diagrama Mermaid con decisiones y estados finales. Revisa la consistencia del flujo y sugiere mejoras si detectas ambigüedades.”</strong></p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Check rápido ⏰ 2 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 7) Verifica comprensión con 2 preguntas breves.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Pregunta 1: ¿Cuál es la diferencia principal entre una <strong>user story</strong> y un <strong>user flow</strong>? Pregunta 2: ¿Por qué es útil el formato <strong>Mermaid.js</strong> para un <strong>user flow</strong>?</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-4">
-        <h2 class="activity-title">⚡ Actividad 4: Brain Spark ⏰ 17-20 minutos</h2>
-        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Producción: Diseño del User Flow Asistido por IA ⏰ 12 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 8) Selecciona una funcionalidad de una app y, con la ayuda de Xolo, genera las user stories y el user flow correspondiente.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">N/A</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Iteración con criterios ⏰ 5 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 9) Revisa tu user flow. ¿Es claro? ¿Cubre los escenarios principales? Pide a Xolo que sugiera un "edge case" (caso límite) para tu flujo y evalúa si tu diseño lo contempla.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Antes de cerrar: valida la claridad y coherencia de tu <strong>user flow</strong>. Si no se cumple, ajusta y vuelve a probar. Considera un <strong>caso límite</strong> sugerido por <strong>Xolo</strong> para robustecer tu diseño.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 3 — Evidencia de resultado ⏰ 2 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 10) Entrega el user flow generado (código Mermaid.js o texto) y las user stories que lo sustentan.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Entrega con nombre: <strong>S03_UserFlow_[TuNombre]</strong>. Incluye el <strong>user flow</strong> (código o texto/captura) y las <strong>user stories</strong> que lo originaron. Reflexiona brevemente sobre el valor de la IA en este proceso.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="activity-card" id="activity-5">
-        <h2 class="activity-title">⚡ Actividad 5: GNIUS STORM ⏰ 5 minutos</h2>
-        <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
-        <div class="steps">
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 1 — Showcase relámpago ⏰ 3 minutos</h3>
-              <p class="step-instructions">2–3 personas/equipos muestran su user flow (30–45 s c/u), explicando la funcionalidad, las user stories clave y cómo la IA les ayudó a estructurar el flujo.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Enfoca tu presentación en la funcionalidad elegida, las <strong>user stories</strong> que la definen, y cómo la asistencia de IA hizo más eficiente la creación de tu <strong>user flow</strong>.</p>
-              </div>
-            </div>
-          </article>
-          <article class="step-card">
-            <div class="step-content">
-              <h3 class="step-title">Paso 2 — Cierre ejecutivo ⏰ 2 minutos</h3>
-              <p class="step-instructions">(Proyectar Diapositiva 11) Síntesis: 1 aprendizaje clave, 1 criterio que más impactó en su diseño, y 1 siguiente paso aplicable.</p>
-            </div>
-            <div class="collapsible">
-              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-              <div class="collapsible-content">
-                <p class="dialogue assistant">Síntesis: Hoy aprendimos el valor de diseñar la experiencia de usuario antes de construir, y cómo la IA puede ser un socio estratégico en este proceso. El criterio clave fue la <strong>trazabilidad</strong> entre la necesidad del usuario y el flujo diseñado. Como siguiente paso, intenten diseñar la <strong>interfaz de usuario</strong> para el primer paso de su flujo.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
